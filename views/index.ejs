@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Upload App</h1>
+      <a href="/upload">Upload an Image</a>
+
+      <% if (success) { %>
+      <div class="success">You successfully added an image!</div>
+      <% } %> <% if (image) { %>
+      <h2>Uploaded Image:</h2>
+      <img src="<%= image %>" alt="Uploaded Image" />
+      <form action="/delete" method="POST">
+        <button class="delete" type="submit">Delete Image</button>
+      </form>
+      <% } %>
+    </div>
+  </body>
+</html>
